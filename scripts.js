@@ -17,15 +17,20 @@ var guessInput = document.querySelector("#guess");
 var submitGuess = document.querySelector("#submit");
 var displayGuess = document.querySelector("#display");
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   randomNumber();
-// });
-// function randomNumber() {
-//    ranNum = Math.floor((Math.random() * 101) + 1);
-// }
-// console.log(ranNum);
+function randomNumber() {
+   ranNum = Math.floor((Math.random() * 101) + 1);
+}
+randomNumber();
+console.log(ranNum);
 
 submitGuess.addEventListener("click", function() {
-    var userGuess = guessInput.value;
-    displayGuess.innerText = userGuess;
+    var userGuess = parseInt(guessInput.value, 10);
+    document.getElementByID("guess-number") = userGuess;
+    if (userGuess == ranNum) {
+      displayGuess.innerText = "Boom!";
+    } else if (userGuess > ranNum) {
+      displayGuess.innerText = "Too high! Guess again."
+    } else {
+      displayGuess.innerText = "Too low! Guess again."
+    }
   });
