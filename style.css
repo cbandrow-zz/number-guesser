@@ -15,10 +15,17 @@ main{
 }
 
 input {
-  margin: auto;
+  width: 50%;
+  margin-top: 4%;
+  margin-bottom: 3%;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
-  text-align: center;
+  text-align: left;
+  padding-left: 2%;
+  padding-right: auto;
   font-family: "Open Sans", sans-serif;
+  font-size: 25px;
 }
 input:focus{
   outline: none;
@@ -26,12 +33,14 @@ input:focus{
 
 #title-num{
   font-family:"Open Sans", sans-serif;
+  font-size: 36px;
   font-weight: 700;
   color: #ED458B;
 }
 
 #title-guess{
   font-family:"Open Sans", sans-serif;
+  font-size: 36px;
   font-weight: 300;
   color: #E6E7E8;
 }
@@ -45,6 +54,11 @@ button {
   border-radius: 20px;
   background-color: #929497;
   color: #ffffff;
+  font-size: 18px;
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+  width: 27%;
 }
 
 button:hover{
