@@ -13,24 +13,46 @@
 
 //Get a Random Number.
 var ranNum;
+var ranMax = 100;
+var additional = 0;
 var guessInput = document.querySelector("#guess");
 var submitGuess = document.querySelector("#submit");
 var displayGuess = document.querySelector("#display");
+var yourGuess = document.querySelector("#your-guess");
+var guessNumber = document.querySelector("#guess-number");
+var guessResponse = document.querySelector("#guess-response");
 
 function randomNumber() {
-   ranNum = Math.floor((Math.random() * 101) + 1);
+   ranNum = Math.floor((Math.random() * ranMax) + 1);
 }
 randomNumber();
 console.log(ranNum);
 
+// submitGuess.addEventListener("click", function() {
+//     var userGuess = parseInt(guessInput.value, 10);
+//     guessNumber.innerText = userGuess;
+//     if (userGuess == ranNum) {
+//       guessResponse.innerText = "Boom!";
+//       // additional = 10;
+//       // randomNumber();
+//     } else if (userGuess > ranNum) {
+//       guessResponse.innerText = "Too high! Guess again."
+//     } else if (userGuess < ranNum) {
+//       guessResponse.innerText = "Too low! Guess again."
+//     }
+//   });
+
 submitGuess.addEventListener("click", function() {
-    var userGuess = parseInt(guessInput.value, 10);
-    document.getElementByID("guess-number") = userGuess;
-    if (userGuess == ranNum) {
-      displayGuess.innerText = "Boom!";
-    } else if (userGuess > ranNum) {
-      displayGuess.innerText = "Too high! Guess again."
-    } else {
-      displayGuess.innerText = "Too low! Guess again."
-    }
-  });
+  var userGuess = parseInt(guessInput.value, 10);
+  console.log(userGuess);
+  yourGuess.innerText = "Your last guess";
+  guessNumber.innerText = userGuess;
+  if (userGuess == ranNum) {
+    guessResponse.innerText = "Boom!";
+    randomNumber();
+  } else if (userGuess > ranNum) {
+    guessResponse.innerText = "was too high!";
+  } else if (userGuess < ranNum) {
+    guessResponse.innerText = "was too low!";
+  }
+});

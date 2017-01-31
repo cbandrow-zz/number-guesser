@@ -49,9 +49,28 @@ input {
 input:focus{
   outline: none;
 }
-#guess-number{
+#your-guess{
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-family: "Open Sans";
+  text-align: center;
   font-size: 40px;
+  color: #929497;
+}
+#guess-number{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 150px;
   color: #EB008B;
+}
+#guess-response{
+  margin-top: 0px;
+  font-family: "Open Sans";
+  text-align: center;
+  font-size: 40px;
+  color: #929497;
 }
 button {
   display: inline-block;
