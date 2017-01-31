@@ -1,1 +1,67 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
+body{
+  margin: 0px;
+  padding: 0px;
+}
+header {
+  text-align: center;
+  width: 100%;
+  background-color: #404041;
+  padding-top: .10%;
+  padding-bottom: .10%;
+}
+main{
+  text-align: center;
+}
+
+input {
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+input:focus{
+  outline: none;
+}
+
+#title-num{
+  font-family:"Open Sans", sans-serif;
+  font-weight: 700;
+  color: #ED458B;
+}
+
+#title-guess{
+  font-family:"Open Sans", sans-serif;
+  font-weight: 300;
+  color: #E6E7E8;
+}
+
+button {
+  display: inline-block;
+  text-align: center;
+  border-width: 0px;
+  font-family: "Open Sans", sans-serif;
+  width: auto;
+  border-radius: 20px;
+  background-color: #929497;
+  color: #ffffff;
+}
+
+button:hover{
+  background-color: #EB008B;
+  color: #ffffff;
+}
+
+button:active{
+  background-color: #d0008B;
+  color: #ffffff;
+}
+
+button:disabled{
+  background-color: #D0D2D3;
+  color: #ffffff;
+}
+
+button:focus{
+  outline: none;
+}
