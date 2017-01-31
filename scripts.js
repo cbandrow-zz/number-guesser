@@ -13,34 +13,24 @@
 
 //Get a Random Number.
 var ranNum;
-var ranMax = 100;
-var additional = 0;
+// var ranMin = 1;
+// var ranMax = 100;
+// var newMin;
+// var newMax;
 var guessInput = document.querySelector("#guess");
 var submitGuess = document.querySelector("#submit");
-var displayGuess = document.querySelector("#display");
 var yourGuess = document.querySelector("#your-guess");
 var guessNumber = document.querySelector("#guess-number");
 var guessResponse = document.querySelector("#guess-response");
+var clearInput = document.querySelector("#clear");
+var resetAll = document.querySelector("#reset");
 
 function randomNumber() {
-   ranNum = Math.floor((Math.random() * ranMax) + 1);
+   ranNum = Math.floor((Math.random() * 101) + 1);
 }
 randomNumber();
 console.log(ranNum);
 
-// submitGuess.addEventListener("click", function() {
-//     var userGuess = parseInt(guessInput.value, 10);
-//     guessNumber.innerText = userGuess;
-//     if (userGuess == ranNum) {
-//       guessResponse.innerText = "Boom!";
-//       // additional = 10;
-//       // randomNumber();
-//     } else if (userGuess > ranNum) {
-//       guessResponse.innerText = "Too high! Guess again."
-//     } else if (userGuess < ranNum) {
-//       guessResponse.innerText = "Too low! Guess again."
-//     }
-//   });
 
 submitGuess.addEventListener("click", function() {
   var userGuess = parseInt(guessInput.value, 10);
@@ -49,10 +39,21 @@ submitGuess.addEventListener("click", function() {
   guessNumber.innerText = userGuess;
   if (userGuess == ranNum) {
     guessResponse.innerText = "Boom!";
-    randomNumber();
+    changeMinMax();
   } else if (userGuess > ranNum) {
     guessResponse.innerText = "was too high!";
   } else if (userGuess < ranNum) {
     guessResponse.innerText = "was too low!";
   }
 });
+
+clearInput.addEventListener("click", function() {
+
+});
+
+// function changeMinMax() {
+//   newMin = ranMin - 10;
+//   newMax = ranMax + 10;
+//   document.querySelector("#guess").min(newMin);
+//   document.querySelector("#guess").max(newMax);
+// }
