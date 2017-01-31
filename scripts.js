@@ -1,5 +1,4 @@
 // Steps for completing JS.
-// 1. Create a function that chooses a random number. Use math.floor and math.random.
 // 2. Create a function that inputs users chosen number, then uses a conditional statement to evaluate and compare the results. This function should contain all conditionals:
 //   if too high
 //   if too low
@@ -35,15 +34,23 @@ console.log(ranNum);
 submitGuess.addEventListener("click", function() {
   var userGuess = parseInt(guessInput.value, 10);
   console.log(userGuess);
-  yourGuess.innerText = "Your last guess";
-  guessNumber.innerText = userGuess;
   if (userGuess == ranNum) {
+    yourGuess.innerText = "Your last guess:";
+    guessNumber.innerText = userGuess;
     guessResponse.innerText = "Boom!";
     changeMinMax();
   } else if (userGuess > ranNum) {
+    yourGuess.innerText = "Your last guess:";
+    guessNumber.innerText = userGuess;
     guessResponse.innerText = "was too high!";
   } else if (userGuess < ranNum) {
+    yourGuess.innerText = "Your last guess:";
+    guessNumber.innerText = userGuess;
     guessResponse.innerText = "was too low!";
+  } else if (isNaN(guessInput) == true) {
+    yourGuess.innerText = "";
+    guessNumber.innerText ="";
+    guessResponse.innerText = "This isn't a number.";
   }
 });
 
