@@ -17,7 +17,7 @@ window.onload = function() {
   minMax();
   disabled();
 }
-
+//generate random number
 function randomNumber(ranMax, ranMin) {
    ranNum = Math.floor(Math.random() * (ranMax - ranMin + 1) + ranMin);
    console.log(ranNum);
@@ -30,7 +30,7 @@ function disabled(){
   document.getElementById("clear").disabled = true;
 };
 
-
+//print minimum, maximum values
 function minMax() {
   document.querySelector("#max").innerText = ranMin;
   document.querySelector("#min").innerText = ranMax;
@@ -56,9 +56,9 @@ submitGuess.addEventListener("click", function() {
     results(userGuess, "was too low!");
   } else if (isNaN(guessInput) == true) {
     notNum("Try entering a number.");
-
   }
 });
+
 //win state
 function win(){
   ranMin -= 10;
@@ -73,28 +73,32 @@ function notNum(msg){
   guessNumber.innerText ="";
   guessResponse.innerText = msg;
 }
-
+//ineligible range input
 function outsideRange(guess,msg){
   yourGuess.innerText = "";
   guessNumber.innerText = guess;
   guessResponse.innerText = msg;
 }
+
 //Overall results
 function results(guess, msg) {
   yourGuess.innerText = "Your last guess:";
   guessNumber.innerText = guess;
   guessResponse.innerText = msg;
-}
+};
+
 //clear button
 clearInput.addEventListener("click", function() {
   guessInput.value = null;
   document.getElementById("clear").disabled = true;
 });
+
 //reset button
 resetAll.addEventListener("click", function() {
   reset();
   disabled();
 });
+
 //reset functionality
 function reset(){
   guessInput.value = null;
@@ -108,8 +112,8 @@ function reset(){
   minMax();
 }
 
+//reset functionality, add new challenge
 function biggerChallenge(){
-  //document.getElementById("resetAll").id = ""
   challenge.addEventListener("click", function() {
     guessInput.value = null;
     yourGuess.innerText = "";
