@@ -107,6 +107,7 @@ button#reset{
 }
 button#challenge{
   width: 57%;
+  margin-bottom: 2%;
 }
 
 button:hover{
