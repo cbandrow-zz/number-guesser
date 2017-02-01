@@ -25,9 +25,6 @@ function disabled(){
   document.getElementById("clear").disabled = true;
 };
 
-// function enabled(){
-//
-// }
 console.log(ranNum);
 function minMax() {
   document.querySelector("#max").innerText = ranMin;
@@ -104,9 +101,6 @@ function reset(){
   randomNumber(1, 100);
   console.log(ranNum);
 }
-// function resumeReset(){
-//     resetAll.innerText ="Reset";
-// }
 
 function biggerChallenge(){
   //document.getElementById("resetAll").id = ""
@@ -119,16 +113,3 @@ function biggerChallenge(){
     disabled();
   })
 };
-
-// if (yourGuess == null){
-//   document.querySelector("#clear").disabled = true;
-//   document.querySelector("#reset").disabled = true;
-// } else {
-//   document.querySelector("#clear").disabled = false;
-//   document.querySelector("#reset").disabled = false;
-// }
-
-// submitGuess.addEventListener("click", function() {
-//   document.querySelector("#clear").disabled = false;
-//   document.querySelector("#reset").disabled = false;
-// })
