@@ -128,3 +128,47 @@ button:disabled{
 button:focus{
   outline: none;
 }
+
+
+@media screen and (max-width : 320px) {
+  input {
+    font-size: 16px;
+  }
+  #title-num{
+    font-size: 22px;
+  }
+
+  #title-guess{
+    font-size: 22px;
+  }
+
+  button {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width : 414px) {
+  input {
+    font-size: 18px;
+  }
+  #title-num{
+    font-size: 24px;
+  }
+
+  #title-guess{
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 14px;
+
+  }
+}
+
+@media screen and (max-width : 768px){
+
+}
+
+@media screen and (max-width : 1224px){
+
+}
