@@ -49,11 +49,20 @@ input {
 input:focus{
   outline: none;
 }
-
-#range{
+p{
   font-family:"Open Sans", sans-serif;
   font-size: 18px;
   color: #929497;
+}
+#max{
+  font-family:"Open Sans", sans-serif;
+  font-size: 18px;
+  color: #7c7c7c;
+}
+#min{
+  font-family:"Open Sans", sans-serif;
+  font-size: 18px;
+  color: #7c7c7c;
 }
 #your-guess{
   margin-top: 15px;
@@ -94,6 +103,9 @@ button {
   width: 27%;
 }
 button#reset{
+  width: 57%;
+}
+button#challenge{
   width: 57%;
 }
 

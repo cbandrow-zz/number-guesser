@@ -1,16 +1,3 @@
-// Steps for completing JS.
-//1. get a random number x
-// 2. Create a function that inputs users chosen number, then uses a conditional statement to evaluate and compare the results. This function should contain all conditionals:
-//   if too high x
-//   if too low x
-//   if matching x
-//   if out of bounds
-//   if not a number (NaN) x
-// This function should also be responsible for displaying the result in the DOM.
-// 3. Function to clear data from input box.
-// 4. Function to reset everything and load new Random number.
-// 5. Function and conditional if matching number is achieved. Adds 10 to the eligible pool of numbers.
-
 //variables
 var ranNum;
 var ranMin = 1;
@@ -22,23 +9,40 @@ var guessNumber = document.querySelector("#guess-number");
 var guessResponse = document.querySelector("#guess-response");
 var clearInput = document.querySelector("#clear");
 var resetAll = document.querySelector("#reset");
+var challenge = document.querySelector("#challenge")
 
 //Get Random Number for Comparison
 function randomNumber(ranMax, ranMin) {
    ranNum = Math.floor(Math.random() * (ranMax - ranMin + 1) + ranMin);
-   document.querySelector("#range").innerText = "Choose a number from " +  ranMax + " to " + ranMin ;
 }
 randomNumber(ranMin, ranMax);
+minMax();
+disabled();
+// rangeText();
+function disabled(){
+  document.getElementById("challenge").disabled = true;
+  document.getElementById("reset").disabled = true;
+  document.getElementById("clear").disabled = true;
+};
+
+// function enabled(){
+//
+// }
 console.log(ranNum);
+function minMax() {
+  document.querySelector("#max").innerText = ranMin;
+  document.querySelector("#min").innerText = ranMax;
+}
 
 //submit user guess for evaluation
 submitGuess.addEventListener("click", function() {
   var userGuess = parseInt(guessInput.value, 10);
   console.log(userGuess);
-  document.querySelector("#range").innerText = "Choose a number from " +  ranMin + " to " + ranMax ;
-  document.getElementById("range").innerText = " ";
+  document.getElementById("clear").disabled = false;
+  document.getElementById("reset").disabled = false;
   if(userGuess == ranNum) {
     results (userGuess, "Boom!");
+    document.getElementById("challenge").disabled = false;
     win();
   } else if (userGuess > ranMax) {
     outsideRange(userGuess, "Outside of range of numbers")
@@ -82,10 +86,12 @@ function results(guess, msg) {
 //clear button
 clearInput.addEventListener("click", function() {
   guessInput.value = null;
+  document.getElementById("clear").disabled = true;
 });
 //reset button
 resetAll.addEventListener("click", function() {
   reset();
+  disabled();
 });
 //reset functionality
 function reset(){
@@ -93,18 +99,24 @@ function reset(){
   yourGuess.innerText = "";
   guessNumber.innerText ="";
   guessResponse.innerText = "";
-  randomNumber(0, 100);
+  ranMax = 100;
+  ranMin = 1;
+  randomNumber(1, 100);
   console.log(ranNum);
 }
+// function resumeReset(){
+//     resetAll.innerText ="Reset";
+// }
 
 function biggerChallenge(){
-  resetAll.innerText ="New Challenge";
-  resetAll.addEventListener("click", function() {
+  //document.getElementById("resetAll").id = ""
+  challenge.addEventListener("click", function() {
+    guessInput.value = null;
     yourGuess.innerText = "";
     guessNumber.innerText ="";
     guessResponse.innerText = "";
     randomNumber(ranMin, ranMax);
-    resetAll.innerText ="Reset";
+    disabled();
   })
 };
 
