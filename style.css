@@ -49,6 +49,12 @@ input {
 input:focus{
   outline: none;
 }
+
+#range{
+  font-family:"Open Sans", sans-serif;
+  font-size: 18px;
+  color: #929497;
+}
 #your-guess{
   margin-top: 15px;
   margin-bottom: 20px;
