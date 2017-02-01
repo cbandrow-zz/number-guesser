@@ -12,12 +12,17 @@ var resetAll = document.querySelector("#reset");
 var challenge = document.querySelector("#challenge")
 
 //Get Random Number for Comparison
+window.onload = function() {
+  randomNumber(ranMin, ranMax);
+  minMax();
+  disabled();
+}
+
 function randomNumber(ranMax, ranMin) {
    ranNum = Math.floor(Math.random() * (ranMax - ranMin + 1) + ranMin);
+   console.log(ranNum);
 }
-randomNumber(ranMin, ranMax);
-minMax();
-disabled();
+
 // rangeText();
 function disabled(){
   document.getElementById("challenge").disabled = true;
@@ -25,7 +30,7 @@ function disabled(){
   document.getElementById("clear").disabled = true;
 };
 
-console.log(ranNum);
+
 function minMax() {
   document.querySelector("#max").innerText = ranMin;
   document.querySelector("#min").innerText = ranMax;
@@ -50,7 +55,7 @@ submitGuess.addEventListener("click", function() {
   } else if (userGuess < ranNum) {
     results(userGuess, "was too low!");
   } else if (isNaN(guessInput) == true) {
-    notNum("This is not a number.");
+    notNum("Try entering a number.");
 
   }
 });
@@ -100,6 +105,7 @@ function reset(){
   ranMin = 1;
   randomNumber(1, 100);
   console.log(ranNum);
+  minMax();
 }
 
 function biggerChallenge(){
@@ -111,5 +117,7 @@ function biggerChallenge(){
     guessResponse.innerText = "";
     randomNumber(ranMin, ranMax);
     disabled();
+    alert("Range is now between " + ranMin + " and " + ranMax)
+    minMax();
   })
 };
