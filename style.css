@@ -44,7 +44,7 @@ section{
   /*Stylings*/
   height: 240px;
   text-align: center;
-  width: 600px;
+  width: 75%;
 }
 
 input {
@@ -54,13 +54,13 @@ input {
   margin-right: auto;
   margin-top: 35px;
   margin-bottom: 15px;
-  padding-left: 2%;
+  padding-left: 15px;
   padding-right: auto;
 
   /*Stylings*/
   border-width: 1px;
-  font-size: 22px;
-  width: 290px;
+  font-size: 20px;
+  width: 60px;
   text-align: left;
 }
 
@@ -72,25 +72,26 @@ input:focus{
 
 h1{
   /*Stylings*/
+  color: #E6E7E8;
   font-size: 38px;
   font-weight: 300;
-  color: #E6E7E8;
+
 }
 #title-num{
   /*Stylings*/
+  color: #ED458B;
   font-size: 38px;
   font-weight: 700;
-  color: #ED458B;
 }
 
 p{
   /*Box and Display Model*/
   margin-top: 10px;
   margin-bottom: 5px;
-  /*Styling*/
-  font-size: 22px;
-  color: #929497;
 
+  /*Styling*/
+  color: #929497;
+  font-size: 22px;
 }
 
 .number-range{
@@ -133,14 +134,13 @@ p{
   text-align: center;
 }
 
-
 /*---Button Styling and Formatting---*/
 
 button {
   /*Box and Display Model*/
   margin-top: 15px;
-  margin-left: 1%;
-  margin-right: 1%;
+  margin-left: 5px;
+  margin-right: 5px;
   margin-bottom: 20px;
 
   /*Stylings*/
@@ -158,18 +158,17 @@ button#reset{
   /*Box and Display Model*/
   display: block;
   font-size: 15px;
-  width: 320px;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
+  width: 320px;
 }
 button#challenge{
   /*Box and Display Model*/
   display: block;
-  width: 320px;
   margin-left: auto;
   margin-right: auto;
-
+  width: 320px;
 }
 
 button:hover{
@@ -193,20 +192,255 @@ button:focus{
 
 
 /*--Media Queries--*/
-/*@media screen and (max-width: 1824px){
+
+@media screen and (max-width : 768px) {
+
+  section{
+    /*Box and Display Model*/
+    margin-left: auto;
+    margin-right: auto;
+
+    /*Stylings*/
+    height: 140px;
+    text-align: center;
+    width: 90%;
+  }
+
+  /*#title-num{*/
+    /*Stylings*/
+    /*color: #ED458B;
+    font-size: 2em;
+    font-weight: 700;
+  }*/
+  h1{
+    /*Stylings*/
+    color: #E6E7E8;
+    font-size: 1em;
+    font-weight: 300;
+  }
+
+  p{
+    /*Box and Display Model*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    /*Styling*/
+    color: #929497;
+    font-size: 16px;
+  }
+
+  .number-range{
+    /*Stylings*/
+    color: #7c7c7c;
+    font-size: 18px;
+  }
+
+  input {
+    /*Box and Display Model*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: auto;
+
+    /*Stylings*/
+    border-width: 1px;
+    font-size: 20px;
+    width: 280px;
+    text-align: left;
+  }
+
+  /*---Displayed input via JS---*/
+
+  #your-guess{
+    /*Box and Display Model*/
+    margin-top: 10px;
+    margin-bottom: 0px;
+
+    /*Stylings*/
+    color: #929497;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #guess-number{
+    /*Box and Display Model*/
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    /*Stylings*/
+    color: #EB008B;
+    font-size: 4.25em;
+    text-align: center;
+  }
+
+  #guess-response{
+    /*Box and Display Model*/
+    margin-top: 0px;
+
+    /*Stylings*/
+    color: #929497;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  button {
+    /*Box and Display Model*/
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    /*Stylings*/
+    background-color: #929497;
+    border-radius: 20px;
+    border-width: 0px;
+    color: #ffffff;
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    width: 275px;
+  }
+
+  button#reset{
+    /*Box and Display Model*/
+    display: block;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 275px;
+  }
+  button#challenge{
+    /*Box and Display Model*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 275px;
+  }
+
 }
 
-@media screen and (max-width : 1224px){
-}
+@media screen and (max-width : 321px) {
 
-@media screen and (max-width : 950px) {
-}
+  section{
+    /*Box and Display Model*/
+    margin-left: auto;
+    margin-right: auto;
 
-@media screen and (max-width : 768px){
-}
+    /*Stylings*/
+    height: 140px;
+    text-align: center;
+    width: 90%;
+  }
 
-@media screen and (max-width : 414px) {
-}
+  h1{
+    /*Stylings*/
+    font-size: 2em;
+    font-weight: 300;
+  }
 
-@media screen and (max-width : 320px) {
+  #title-num{
+    /*Stylings*/
+    font-size: 1em;
+    font-weight: 700;
+  }
+
+
+  p{
+    /*Box and Display Model*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    /*Styling*/
+    font-size: 16px;
+  }
+
+  .number-range{
+    /*Stylings*/
+    font-size: 18px;
+  }
+
+  input {
+    /*Box and Display Model*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: auto;
+
+    /*Stylings*/
+    border-width: 1px;
+    font-size: 20px;
+    width: 245px;
+    text-align: left;
+  }
+
+  /*---Displayed input via JS---*/
+
+  #your-guess{
+    /*Box and Display Model*/
+    margin-top: 10px;
+    margin-bottom: 0px;
+
+    /*Stylings*/
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #guess-number{
+    /*Box and Display Model*/
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    /*Stylings*/
+    font-size: 4.25em;
+    text-align: center;
+  }
+
+  #guess-response{
+    /*Box and Display Model*/
+    margin-top: 0px;
+
+    /*Stylings*/
+    font-size: 20px;
+    text-align: center;
+  }
+
+  button {
+    /*Box and Display Model*/
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    /*Stylings*/
+    border-radius: 20px;
+    border-width: 0px;
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    width: 275px;
+  }
+
+  button#reset{
+    /*Box and Display Model*/
+    display: block;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 275px;
+  }
+  button#challenge{
+    /*Box and Display Model*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 275px;
+  }
 }
