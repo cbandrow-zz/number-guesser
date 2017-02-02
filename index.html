@@ -10,11 +10,12 @@
       <h1><span id="title-num">Number</span><span id="title-guess"> Guesser</span></h1>
     </header>
     <main>
+      <lable for="Guess Entry"></lable>
       <input id="guess" placeholder ="Enter your guess" min="0" max="100">
       <p>Choose a number from <span id="max"></span> to <span id="min"></span></p>
       <button id ="submit">Guess</button>
       <button id ="clear">Clear</button>
-      <div>
+      <div role ="display user guess messages">
         <p id="your-guess"></p>
         <p id="guess-number"></p>
         <p id="guess-response"></p>
