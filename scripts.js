@@ -13,7 +13,7 @@ var challenge = document.querySelector("#challenge")
 
 //Get Random Number for Comparison
 window.onload = function() {
-  randomNumber(ranMin, ranMax);
+  randomNumber(1, 100);
   minMax();
   disabled();
 }
