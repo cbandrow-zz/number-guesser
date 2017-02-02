@@ -121,7 +121,6 @@ function biggerChallenge(){
     guessResponse.innerText = "";
     randomNumber(ranMin, ranMax);
     disabled();
-    alert("Range is now between " + ranMin + " and " + ranMax)
     minMax();
   })
 };

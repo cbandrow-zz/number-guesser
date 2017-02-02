@@ -92,12 +92,11 @@ button {
   text-align: center;
   border-width: 0px;
   font-family: "Open Sans", sans-serif;
-  width: auto;
   border-radius: 20px;
   background-color: #929497;
   color: #ffffff;
   font-size: 18px;
-  margin-top: 1%;
+  margin-top: 4%;
   margin-left: 1%;
   margin-right: 1%;
   width: 27%;
@@ -106,6 +105,7 @@ button#reset{
   width: 57%;
 }
 button#challenge{
+  margin-top: 4%;
   width: 57%;
   margin-bottom: 2%;
 }
@@ -130,45 +130,364 @@ button:focus{
 }
 
 
-@media screen and (max-width : 320px) {
-  input {
-    font-size: 16px;
-  }
+/*--Media Queries--*/
+@media screen and (max-width: 1824px){
   #title-num{
-    font-size: 22px;
+    font-size: 1.45em;
   }
 
   #title-guess{
-    font-size: 22px;
+    font-size: 1.45em;
+  }
+
+  input {
+    margin-top: 0.75em;
+    margin-bottom: 0.55em;
+    font-size: 2.15em;
+    width: 30%;
+  }
+
+  p{
+    font-size: 1.55em;
+    margin-bottom: 0em;
+  }
+
+  #max{
+    font-size: 1.56em;
+  }
+
+  #min{
+    font-size: 1.56em;
+  }
+
+  #your-guess{
+    margin-top: 1em;
+    margin-bottom: 0em;
+    font-size: 1.75em;
+  }
+  #guess-number{
+    font-size: 8.5em;
+  }
+  #guess-response{
+    font-size: 1.75em;
+    margin-bottom: 1em;
   }
 
   button {
-    font-size: 10px;
+    width: 17%;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.35em;
+    margin-top: 2%;
+  }
+
+  button#reset{
+    display: inline-block;
+    width: 17%;
+    margin-top: 0.5%;
+  }
+
+  button#challenge{
+    display: inline-block;
+    margin-top: 0.5%;
+    width: 17%;
+    margin-bottom: 2%;
+    }
+  }
+
+@media screen and (max-width : 1224px){
+  #title-num{
+    font-size: 1.35em;
+  }
+
+  #title-guess{
+    font-size: 1.35em;
+  }
+  input {
+    font-size: 1.5em;
+    width: 45%;
+  }
+  p{
+    font-size: 1.3em;
+    margin-bottom: 0em;
+  }
+
+  #max{
+    font-size: 1.35em;
+  }
+
+  #min{
+    font-size: 1.35em;
+  }
+
+  #your-guess{
+    margin-top: 1em;
+    margin-bottom: 0em;
+    font-size: 1.75em;
+  }
+  #guess-number{
+    font-size: 7.5em;
+  }
+  #guess-response{
+    font-size: 1.75em;
+    margin-bottom: 1em;
+  }
+
+  button {
+    width: 20%;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.25em;
+  }
+
+  button#reset{
+    display: block;
+    width: 30%;
+    margin-top: 1%;
+  }
+
+  button#challenge{
+    display: block;
+    margin-top: 2%;
+    width: 30%;
+    margin-bottom: 2%;
+    }
+  }
+
+@media screen and (max-width : 950px) {
+  #title-num{
+    font-size: 1.30em;
+  }
+
+  #title-guess{
+    font-size: 1.30em;
+  }
+  input {
+    font-size: 1.42em;
+    width: 50%;
+  }
+  p{
+    font-size: 1.25em;
+    margin-bottom: 0em;
+  }
+
+  #max{
+    font-size: 1.3em;
+  }
+
+  #min{
+    font-size: 1.3em;
+  }
+
+  #your-guess{
+    margin-top: 1em;
+    margin-bottom: 0em;
+    font-size: 1.6em;
+  }
+  #guess-number{
+    font-size: 6.75em;
+  }
+  #guess-response{
+    font-size: 1.6em;
+    margin-bottom: 1em;
+  }
+
+  button {
+    width: 20%;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.195em;
+  }
+
+  button#reset{
+    width: 35%;
+    margin-top: 1%;
+  }
+
+  button#challenge{
+    margin-top: 2%;
+    width: 35%;
+    margin-bottom: 2%;
+  }
+}
+
+
+
+
+@media screen and (max-width : 768px){
+  #title-num{
+    font-size: 1.30em;
+  }
+
+  #title-guess{
+    font-size: 1.30em;
+  }
+  input {
+    font-size: 1.35em;
+    width: 50%;
+  }
+  p{
+    font-size: 1.15em;
+    margin-bottom: 0em;
+  }
+
+  #max{
+    font-size: 1.25em;
+  }
+
+  #min{
+    font-size: 1.25em;
+  }
+
+  #your-guess{
+    margin-top: 1em;
+    margin-bottom: 0em;
+    font-size: 1.6em;
+  }
+  #guess-number{
+    font-size: 5.75em;
+  }
+  #guess-response{
+    font-size: 1.6em;
+    margin-bottom: 1em;
+  }
+
+  button {
+    width: 23.5%;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.175em;
+  }
+
+  button#reset{
+    width: 45%;
+    margin-top: 1%;
+  }
+
+  button#challenge{
+    margin-top: 2%;
+    width: 45%;
+    margin-bottom: 2%;
   }
 }
 
 @media screen and (max-width : 414px) {
-  input {
-    font-size: 18px;
-  }
   #title-num{
-    font-size: 24px;
+    font-size: 1.20em;
   }
 
   #title-guess{
-    font-size: 24px;
+    font-size: 1.20em;
+  }
+  header {
+    padding-top: .05%;
+    padding-bottom: .05%;
+  }
+  input {
+    font-size: 1.2em;
+    width: 60%;
+  }
+  p{
+    font-size: 1.05em;
+  }
+
+  #max{
+    font-size: 1.1em;
+  }
+
+  #min{
+    font-size: 1.1em;
+  }
+
+  #your-guess{
+    margin-top: 1.5em;
+    margin-bottom: 0em;
+    font-size: 1.6em;
+  }
+  #guess-number{
+    font-size: 5em;
+  }
+  #guess-response{
+    font-size: 1.6em;
   }
 
   button {
-    font-size: 14px;
+    width: 62.5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.10em;
+  }
 
+  button#reset{
+    width: 62.5%;
+  }
+
+  button#challenge{
+    margin-top: 4%;
+    width: 62.5%;
+    margin-bottom: 2%;
   }
 }
 
-@media screen and (max-width : 768px){
+@media screen and (max-width : 320px) {
+  #title-num{
+    font-size: 1em;
+  }
 
-}
+  #title-guess{
+    font-size: 1em;
+  }
+  header {
+    padding-top: .025%;
+    padding-bottom: .025%;
+  }
+  input {
+    font-size: 1.15em;
+    width: 65%;
+  }
+  p{
+    font-size: 1em;
+  }
 
-@media screen and (max-width : 1224px){
+  #max{
+    font-size: 1.15em;
+  }
 
+  #min{
+    font-size: 1.15em;
+  }
+
+  #your-guess{
+    margin-top: 1em;
+    margin-bottom: 0em;
+    font-size: 1.4em;
+  }
+  #guess-number{
+    font-size: 4.5em;
+  }
+  #guess-response{
+    font-size: 1.4em;
+  }
+
+  button {
+    width: 60.5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: .95em;
+  }
+  button#reset{
+    width: 60.5%;
+  }
+
+  button#challenge{
+    margin-top: 4%;
+    width: 60.5%;
+    margin-bottom: 2%;
+  }
 }
