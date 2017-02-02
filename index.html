@@ -3,23 +3,22 @@
   <head>
     <title>Number Guesser</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <lang
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
   </head>
   <body>
     <header>
-      <h1><span id="title-num">Number</span><span id="title-guess"> Guesser</span></h1>
+      <h1><span id="title-num">Number</span> Guesser</h1>
     </header>
     <main>
       <input id="guess" placeholder ="Enter your guess" min="0" max="100" aria-label="Enter your number guess">
-      <p>Choose a number from <span id="max"></span> to <span id="min"></span></p>
+      <p>Choose a number from <span id="max" class="number-range"></span> to <span id="min" class="number-range"></span></p>
       <button id ="submit">Guess</button>
       <button id ="clear">Clear</button>
       <section>
-        <p id="your-guess"></p>
-        <p id="guess-number"></p>
-        <p id="guess-response"></p>
+        <p id="your-guess"> </p>
+        <p id="guess-number"> </p>
+        <p id="guess-response"> </p>
       </section>
       <button id="reset">Reset</button>
       <button id="challenge">New Challenge</button>
