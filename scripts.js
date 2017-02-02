@@ -20,7 +20,6 @@ window.onload = function() {
 //generate random number
 function randomNumber(ranMax, ranMin) {
    ranNum = Math.floor(Math.random() * (ranMax - ranMin + 1) + ranMin);
-   console.log(ranNum);
 }
 
 // rangeText();
@@ -39,7 +38,6 @@ function minMax() {
 //submit user guess for evaluation
 submitGuess.addEventListener("click", function() {
   var userGuess = parseInt(guessInput.value, 10);
-  console.log(userGuess);
   document.getElementById("clear").disabled = false;
   document.getElementById("reset").disabled = false;
   if(userGuess == ranNum) {
@@ -63,7 +61,6 @@ submitGuess.addEventListener("click", function() {
 function win(){
   ranMin -= 10;
   ranMax += 10;
-  console.log(ranMin, ranMax)
   biggerChallenge();
 
 }
@@ -108,7 +105,6 @@ function reset(){
   ranMax = 100;
   ranMin = 1;
   randomNumber(1, 100);
-  console.log(ranNum);
   minMax();
 }
 
@@ -121,7 +117,6 @@ function biggerChallenge(){
     guessResponse.innerText = "";
     randomNumber(ranMin, ranMax);
     disabled();
-    alert("Range is now between " + ranMin + " and " + ranMax)
     minMax();
   })
 };
