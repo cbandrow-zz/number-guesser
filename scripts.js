@@ -22,7 +22,6 @@ function randomNumber(ranMax, ranMin) {
    ranNum = Math.floor(Math.random() * (ranMax - ranMin + 1) + ranMin);
 }
 
-// rangeText();
 function disabled(){
   document.getElementById("challenge").disabled = true;
   document.getElementById("reset").disabled = true;
@@ -43,7 +42,6 @@ submitGuess.addEventListener("click", function() {
   if(userGuess == ranNum) {
     results (userGuess, "Boom!");
     document.getElementById("challenge").disabled = false;
-    win();
   } else if (userGuess > ranMax) {
     outsideRange(userGuess, "Outside of range of numbers")
   } else if (userGuess < ranMin) {
