@@ -314,11 +314,13 @@ button:focus{
   button#reset{
     /*Box and Display Model*/
     display: block;
-    font-size: 1.25em;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 315px;
+
+    /*Styling*/
+    font-size: 1.25em;
   }
   button#challenge{
     /*Box and Display Model*/
@@ -331,10 +333,11 @@ button:focus{
 @media screen and (min-width : 1200px){
 
   header {
-    height: 90px;
     /*Box and Display Model*/
     margin-top: 0px;
     margin-bottom: 0px;
+    /*Styling*/
+    height: 90px;
   }
 
   section{
@@ -361,8 +364,8 @@ button:focus{
     /*Stylings*/
     border-width: 1px;
     font-size: 2em;
-    width: 360px;
     text-align: left;
+    width: 360px;
     }
 
   h1{
@@ -375,7 +378,6 @@ button:focus{
 
   #title-num{
     /*Stylings*/
-    color: #ED458B;
     font-weight: 700;
   }
 
@@ -412,7 +414,6 @@ button:focus{
     margin-bottom: 0px;
 
     /*Stylings*/
-    color: #EB008B;
     font-size: 8.5em;
     text-align: center;
   }
